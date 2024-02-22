@@ -2,9 +2,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 const links = [
-  { path: "/", name: "home" },
-  { path: "/projects", name: "my projects" },
-  { path: "/contacts", name: "contact" },
+  { path: "/", name: "خانه" },
+  { path: "/projects", name: "پروژه های من" },
+  { path: "/contacts", name: "ارتباط با من" },
 ];
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {

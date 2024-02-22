@@ -2,9 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+@font-face {
+  font-family: "vazir";
+  src: url("../assets/vazirmatn-v33.003/fonts/ttf/Vazirmatn-Medium.ttf");
+}
+
+@font-face {
+  font-family: "vazir-digits";
+  src: url("../assets/vazirmatn-v33.003/misc/Farsi-Digits/fonts/ttf/Vazirmatn-FD-Black.ttf");
+}
+
+* {
+  font-family: vazir;
   direction: rtl;
 }
+
+.number {
+  font-family: vazir-digits;
+}
+
 
 @layer base {
   :root {

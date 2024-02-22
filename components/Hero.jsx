@@ -18,23 +18,32 @@ const Hero = () => {
     <section className="py-12 xl:py-24 h-[84vh] xl:pt-28">
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
-          <div className=" flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-            <div className="text-sm uppercase font-semibold text-primary mb-4 tracking-[4px]">
-              Web Developer
+          <div className=" flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-right">
+            <div className="text-sm font-semibold text-primary mb-4">
+              توسعه دهنده وب
             </div>
-            <h1 className="h1 mb-4">Hello, my name is Hossein</h1>
+            <h1 className="h1 mb-4">
+              سلام من حسین زحمتکشان هستم{" "}
+              <span className="text-3xl">&#128512;</span>
+            </h1>
             <p className="subtitle mx-w-[490px] mx-auto xl:mx-0">
-              Brief description with insights into myself, my vocational
-              journey, and what I engage in professionaly.
+              طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند
+              که محتوای اصلی صفحات آماده نیست. در نتیجه طرح کلی دید درستی به کار
+              فرما نمیدهد. اگر طراح بخواهد دنبال متن های مرتبط بگردد تمرکزش از
+              روی کار اصلی برداشته میشود و اینکار زمان بر خواهد بود. همچنین طراح
+              به دنبال این است که پس از ارایه کار نظر دیگران را در مورد طراحی
+              جویا شود و نمی‌خواهد افراد روی متن های موجود تمرکز کنند.
             </p>
             <div className="flex flex-col gap-y-3 md:flex-row  gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="/contacts">
                 <Button className="gap-x-2">
-                  contact me <Send size={18} />
+                  <Send size={18} />
+                  ارتباط با من
                 </Button>
               </Link>
               <Button variant="secondary" className="gap-x-2">
-                Download CV <Download size={18} />
+                <Download size={18} />
+                دانلود
               </Button>
             </div>
             <Socials

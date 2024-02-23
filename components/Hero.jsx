@@ -52,6 +52,7 @@ const Hero = () => {
             />
           </div>
           <div className="hidden xl:flex relative">
+            <Badge/>
             <div className="bg-hero_shape dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -left-2"></div>
             <DevImg containerStyles=" w-[510px] h-[462px] bg-no-repeat relative bg-bottom" imgSrc="/hero/me.jpg"/>
           </div>

@@ -89,6 +89,11 @@ const About = () => {
     <section>
       <div className="container mx-auto">
         <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">درباره من</h2>
+        <div>
+          <div>
+            <DevImg containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative" imgSrc="/hero/me.jpg"/>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -82,7 +82,16 @@ const skillData = [
 ];
 
 const About = () => {
-  return <div>About</div>;
+  const getData = (arr, title) => {
+    return arr.find((item) => item.title === title);
+  };
+  return (
+    <section>
+      <div className="container mx-auto">
+        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">درباره من</h2>
+      </div>
+    </section>
+  );
 };
 
 export default About;

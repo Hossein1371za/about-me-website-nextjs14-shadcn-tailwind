@@ -9,7 +9,7 @@ import {
   PhoneCall,
   GraduationCap,
   Calendar,
-  BrifeCase,
+  Briefcase,
 } from "lucide-react";
 
 const infoData = [
@@ -85,6 +85,7 @@ const About = () => {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
+console.log(getData(qualificationData,"تحصیلات").title)
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24">
       <div className="container mx-auto">
@@ -142,7 +143,22 @@ const About = () => {
                     </div>
                   </div>
                 </TabsContent>
-                <TabsContent value="qualification">تحصیات</TabsContent>
+                <TabsContent value="qualification">
+                  <div>
+                    <h3 className="h3 mb-8 text-center xl:text-right">مسیر تحصیلات من</h3>
+                    <div>
+                      <div>
+                        <div>
+                          <Briefcase/>
+                          <div>
+                            {getData(qualificationData,"تجربیات").title}
+                          </div>
+                        </div>
+                      </div>
+                      <div>education</div>
+                    </div>
+                  </div>
+                </TabsContent>
                 <TabsContent value="skills">مهارت ها</TabsContent>
               </div>
             </Tabs>

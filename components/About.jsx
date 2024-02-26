@@ -88,20 +88,42 @@ const About = () => {
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">درباره من</h2>
+        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
+          درباره من
+        </h2>
         <div className="flex flex-col xl:flex-row">
           <div className="hidden xl:flex flex-1 relative">
-            <DevImg containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative" imgSrc="/hero/me.jpg"/>
+            <DevImg
+              containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
+              imgSrc="/hero/me.jpg"
+            />
           </div>
           <div className="flex-1">
-            <Tabs defaultValue="peronal">
+            <Tabs>
               <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
-                <TabsTrigger valu="personal">اطلاعات شخصی</TabsTrigger>
-                <TabsTrigger value="qualification">تحصیلات</TabsTrigger>
-                <TabsTrigger value="skills">مهارت ها</TabsTrigger>
+                <TabsTrigger className="w-[162px] xl:w-auto" valu="personal">
+                  اطلاعات شخصی
+                </TabsTrigger>
+                <TabsTrigger
+                  className="w-[162px] xl:w-auto"
+                  value="qualification"
+                >
+                  تحصیلات
+                </TabsTrigger>
+                <TabsTrigger className="w-[162px] xl:w-auto" value="skills">
+                  مهارت ها
+                </TabsTrigger>
               </TabsList>
               <div className="text-lg mt-12 xl:mt-8">
-                <TabsContent value="personal">اطلاعات شخصی</TabsContent>
+                <TabsContent valu="peronal">
+                  <div className="text-center xl:text-right ">
+                    <h3 className="h3 mb-4">درحال آموزش به مدت یک سالو نیم</h3>
+                    <p className="subtitle max-w-xl mx-auto xl:mx-0">
+                      من در حال آموزش ساخت وب سایت های پویا با تکنولوژی های
+                      پیشرفته هستم و تا کنون چندین قالب وب سایت طراحی کرده ام.
+                    </p>
+                  </div>
+                </TabsContent>
                 <TabsContent value="qualification">تحصیات</TabsContent>
                 <TabsContent value="skills">مهارت ها</TabsContent>
               </div>

@@ -122,6 +122,24 @@ const About = () => {
                       من در حال آموزش ساخت وب سایت های پویا با تکنولوژی های
                       پیشرفته هستم و تا کنون چندین قالب وب سایت طراحی کرده ام.
                     </p>
+                    <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                      {infoData.map((item, index) => {
+                        return (
+                          <div
+                            className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                            key={index}
+                          >
+                            <div className="text-primary">{item.icon}</div>
+                            <div>{item.text}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="flex flex-col gap-y-2">
+                      <div className="text-primary">زبان های خارجی</div>
+                      <div className="border-b border-border"></div>
+                      <div>انگلیسی, فارسی, آلمانی</div>
+                    </div>
                   </div>
                 </TabsContent>
                 <TabsContent value="qualification">تحصیات</TabsContent>

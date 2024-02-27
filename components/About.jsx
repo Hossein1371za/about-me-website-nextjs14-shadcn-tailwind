@@ -33,9 +33,9 @@ const qualificationData = [
   {
     title: "تجربیات",
     data: [
-      { company: "شرکت 1", qualification: "برنامه نویس", years: "1400 " },
-      { company: "شرکت 2", qualification: "برنامه نویس", years: "1401 " },
-      { company: "شرکت 3", qualification: "برنامه نویس", years: "1402 " },
+      { company: "شرکت 1", role: "برنامه نویس", years: "1400 " },
+      { company: "شرکت 2", role: "برنامه نویس", years: "1401 " },
+      { company: "شرکت 3", role: "برنامه نویس", years: "1402 " },
     ],
   },
 ];
@@ -85,7 +85,7 @@ const About = () => {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
-console.log(getData(qualificationData,"تحصیلات").title)
+  console.log(getData(qualificationData, "تحصیلات").title);
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24">
       <div className="container mx-auto">
@@ -145,17 +145,84 @@ console.log(getData(qualificationData,"تحصیلات").title)
                 </TabsContent>
                 <TabsContent value="qualification">
                   <div>
-                    <h3 className="h3 mb-8 text-center xl:text-right">مسیر تحصیلات من</h3>
+                    <h3 className="h3 mb-8 text-center xl:text-right">
+                      مسیر تحصیلات من
+                    </h3>
                     <div>
+                      {/* تجربیات */}
                       <div>
-                        <div>
-                          <Briefcase/>
-                          <div>
-                            {getData(qualificationData,"تجربیات").title}
-                          </div>
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <Briefcase />
+                          <h4 className="font-medium">
+                            {getData(qualificationData, "تجربیات").title}
+                          </h4>
+                        </div>
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "تجربیات").data.map(
+                            (item, index) => {
+                              const { company, role, years } = item;
+                              return (
+                                <div
+                                  className="flex gap-x-8 group"
+                                  key={index}
+                                >
+                                  <div className="h-[84px] w-[1px] bg-border relative mr-2">
+                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -right-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                  </div>
+                                  <div>
+                                    <div className="font-semibold text-xl leading-none mb-2">
+                                      {company}
+                                    </div>
+                                    <div className="text-lg leading-none text-muted-foreground mb-4">
+                                      {role}
+                                    </div>
+                                    <div className="text-base font-medium">
+                                      {years}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+                          )}
                         </div>
                       </div>
-                      <div>education</div>
+                      {/* تحصیلات */}
+                      <div>
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <Briefcase />
+                          <h4 className="font-medium">
+                            {getData(qualificationData, "تحصیلات").title}
+                          </h4>
+                        </div>
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "تحصیلات").data.map(
+                            (item, index) => {
+                              const { university, qualification, years } = item;
+                              return (
+                                <div
+                                  className="flex gap-x-8 group"
+                                  key={index}
+                                >
+                                  <div className="h-[84px] w-[1px] bg-border relative mr-2">
+                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -right-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
+                                  </div>
+                                  <div>
+                                    <div className="font-semibold text-xl leading-none mb-2">
+                                      {university}
+                                    </div>
+                                    <div className="text-lg leading-none text-muted-foreground mb-4">
+                                      {qualification}
+                                    </div>
+                                    <div className="text-base font-medium">
+                                      {years}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </TabsContent>

@@ -226,7 +226,15 @@ const About = () => {
                     </div>
                   </div>
                 </TabsContent>
-                <TabsContent value="skills">مهارت ها</TabsContent>
+                <TabsContent value="skills">
+                  <div className="text-center xl:text-right">
+                    <h3 className="mb-8 h3">من با کدام ابزارها سرو کار دارم؟</h3>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">مهارت ها</h4>
+                      <div className="border-b border-border mb-4"></div>
+                    </div>
+                  </div>
+                </TabsContent>
               </div>
             </Tabs>
           </div>

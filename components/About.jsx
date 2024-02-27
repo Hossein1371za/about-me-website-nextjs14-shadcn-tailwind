@@ -148,9 +148,9 @@ const About = () => {
                     <h3 className="h3 mb-8 text-center xl:text-right">
                       مسیر تحصیلات من
                     </h3>
-                    <div>
+                    <div className="grid md:grid-cols-2 gap-y-8">
                       {/* تجربیات */}
-                      <div>
+                      <div className="flex flex-col gap-y-6">
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
                           <Briefcase />
                           <h4 className="font-medium">
@@ -187,9 +187,9 @@ const About = () => {
                         </div>
                       </div>
                       {/* تحصیلات */}
-                      <div>
+                      <div className="flex flex-col gap-y-6">
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
-                          <Briefcase />
+                          <GraduationCap size={28} />
                           <h4 className="font-medium">
                             {getData(qualificationData, "تحصیلات").title}
                           </h4>

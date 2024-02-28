@@ -85,7 +85,6 @@ const About = () => {
   const getData = (arr, title) => {
     return arr.find((item) => item.title === title);
   };
-  console.log(getData(qualificationData, "تحصیلات").title);
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24">
       <div className="container mx-auto">
@@ -162,10 +161,7 @@ const About = () => {
                             (item, index) => {
                               const { company, role, years } = item;
                               return (
-                                <div
-                                  className="flex gap-x-8 group"
-                                  key={index}
-                                >
+                                <div className="flex gap-x-8 group" key={index}>
                                   <div className="h-[84px] w-[1px] bg-border relative mr-2">
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -right-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                   </div>
@@ -199,10 +195,7 @@ const About = () => {
                             (item, index) => {
                               const { university, qualification, years } = item;
                               return (
-                                <div
-                                  className="flex gap-x-8 group"
-                                  key={index}
-                                >
+                                <div className="flex gap-x-8 group" key={index}>
                                   <div className="h-[84px] w-[1px] bg-border relative mr-2">
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -right-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                   </div>
@@ -228,10 +221,48 @@ const About = () => {
                 </TabsContent>
                 <TabsContent value="skills">
                   <div className="text-center xl:text-right">
-                    <h3 className="mb-8 h3">من با کدام ابزارها سرو کار دارم؟</h3>
-                    <div>
+                    <h3 className="mb-8 h3">
+                      من در چه بخشهایی مهارت کسب میکنم؟
+                    </h3>
+                    <div className="mb-16">
                       <h4 className="text-xl font-semibold mb-2">مهارت ها</h4>
                       <div className="border-b border-border mb-4"></div>
+                      <div>
+                        {getData(skillData, "مهارت ها").data.map(
+                          (item, index) => {
+                            return (
+                              <div
+                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
+                                key="index"
+                              >
+                                <div className="font-medium">{item.name}</div>
+                              </div>
+                            );
+                          }
+                        )}
+                      </div>
+                    </div>
+                    {/* ابزار ها */}
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2 xl:text-right">
+                        ابزارها
+                      </h4>
+                      <div className="border-b border-b-border mb-8"></div>
+                      <div className="flex gap-x-8 justify-center xl:justify-start">
+                        {getData(skillData, "ابزار").data.map((item, index) => {
+                          return (
+                            <div key={index}>
+                              <Image
+                                src={item.imgPath}
+                                width={48}
+                                height={48}
+                                alt=""
+                                priority
+                              />
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </TabsContent>

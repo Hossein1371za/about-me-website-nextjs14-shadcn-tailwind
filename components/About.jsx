@@ -233,7 +233,7 @@ const About = () => {
                             return (
                               <div
                                 className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
-                                key="index"
+                                key={index}
                               >
                                 <div className="font-medium">{item.name}</div>
                               </div>

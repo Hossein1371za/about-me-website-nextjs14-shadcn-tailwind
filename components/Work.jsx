@@ -101,14 +101,12 @@ const Work = () => {
           <h2 className="section-title mb-4">جدیدترین پروژه ها</h2>
           <p className="subtitle mb-8">
             طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند
-            که محتوای اصلی صفحات آماده نیست. در نتیجه طرح کلی دید درستی به کار
-            فرما نمیدهد.
           </p>
           <Link href="./project">
             <Button>همه</Button>
           </Link>
         </div>
-        <div className="xl:max-w-[1000px] xl:absolute left-0 top-0">
+        <div className="xl:max-w-[1000px] xl:absolute left-0 top-0 ">
           <Swiper
             className="h-[480px]"
             slidesPerView={1}
@@ -121,7 +119,7 @@ const Work = () => {
             modules={[Pagination]}
             pagination={{ clickable: true }}
           >
-            {projectData.slice(0.4).map((project, index) => {
+            {projectData.slice(0,4).map((project, index) => {
               return (
                 <SwiperSlide key={index}>
                   <ProjectCard project={project} />

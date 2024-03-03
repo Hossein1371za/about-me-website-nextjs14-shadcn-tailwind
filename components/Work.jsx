@@ -9,10 +9,10 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import ProjectCard from "./ProjectCard";
 
-const projectData = [
+export const projectData = [
   {
     image: "/work/3.png",
-    category: "react js",
+    category: "ری اکت",
     name: "وب سایت اول",
     description:
       "طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند",
@@ -21,7 +21,7 @@ const projectData = [
   },
   {
     image: "/work/4.png",
-    category: "react js",
+    category: "ری اکت",
     name: "وب سایت دوم",
     description:
       "طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند",
@@ -30,7 +30,7 @@ const projectData = [
   },
   {
     image: "/work/2.png",
-    category: "next js",
+    category: "نکست",
     name: "وب سایت سوم",
     description:"طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند",
     link: "/",
@@ -38,7 +38,7 @@ const projectData = [
   },
   {
     image: "/work/1.png",
-    category: "next js",
+    category: "نکست",
     name: "وب سایت چهارم",
     description:"طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند",
     link: "/",
@@ -46,7 +46,7 @@ const projectData = [
   },
   {
     image: "/work/3.png",
-    category: "next js",
+    category: "نکست",
     name: "وب سایت پنجم",
     description:"طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند",
     link: "/",
@@ -54,7 +54,7 @@ const projectData = [
   },
   {
     image: "/work/4.png",
-    category: "next js",
+    category: "نکست",
     name: "وب سایت ششم",
     description:"طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند",
     link: "/",
@@ -62,7 +62,7 @@ const projectData = [
   },
   {
     image: "/work/1.png",
-    category: "fullstack",
+    category: "فول استک",
     name: "وب سایت هفتم",
     description:"طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند",
     link: "/",
@@ -70,7 +70,7 @@ const projectData = [
   },
   {
     image: "/work/3.png",
-    category: "fullstack",
+    category: "فول استک",
     name: "وب سایت هشتم",
     description:"طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند",
     link: "/",
@@ -78,7 +78,7 @@ const projectData = [
   },
   {
     image: "/work/2.png",
-    category: "react js",
+    category: "ری اکت",
     name: "وب سایت نهم",
     description:"طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند",
     link: "/",

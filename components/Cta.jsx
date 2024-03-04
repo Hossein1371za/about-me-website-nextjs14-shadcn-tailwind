@@ -10,7 +10,7 @@ const Cta = () => {
                 <h2 className="h2 max-w-xl text-center mb-8">
                     برای تبدیل رویاهات به واقیت آماده ای؟ من میتونم تو این مسیر راهنماییت کنم.
                 </h2>
-                <Link href='/contacts'>
+                <Link href='/contact'>
                     <Button>ارتباط با من</Button>
                 </Link>
             </div>

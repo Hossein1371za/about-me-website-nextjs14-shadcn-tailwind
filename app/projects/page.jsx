@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { projectData } from "@/components/Work";
 import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/tabs";
+import ProjectCard from "@/components/ProjectCard";
 
 const uniqueCategory = [
   "همه پروژه ها",
@@ -9,6 +10,11 @@ const uniqueCategory = [
 ];
 const Projects = () => {
   const [category, setCategory] = useState("همه پروژه ها");
+  const filterProjects = projectData.filter((project) => {
+    return category === "همه پروژه ها"
+      ? project
+      : project.category === category;
+  });
   return (
     <section className="min-h-screen pt-12">
       <div className="container mx-auto">
@@ -30,6 +36,15 @@ const Projects = () => {
               );
             })}
           </TabsList>
+          <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
+            {filterProjects.map((project,index)=>{
+              return (
+                <TabsContent value={category} key={index}>
+                  <ProjectCard project={project}/>
+                </TabsContent>
+              )
+            })}
+          </div>
         </Tabs>
       </div>
     </section>

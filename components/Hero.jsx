@@ -35,7 +35,7 @@ const Hero = () => {
               جویا شود و نمی‌خواهد افراد روی متن های موجود تمرکز کنند.
             </p>
             <div className="flex flex-col gap-y-3 md:flex-row  gap-x-3 mx-auto xl:mx-0 mb-12">
-              <Link href="/contacts">
+              <Link href="/contact">
                 <Button className="gap-x-2">
                   <Send size={18} />
                   ارتباط با من

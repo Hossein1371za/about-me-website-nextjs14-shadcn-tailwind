@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const links = [
   { path: "/", name: "خانه" },
   { path: "/projects", name: "پروژه های من" },
-  { path: "/contacts", name: "ارتباط با من" },
+  { path: "/contact", name: "ارتباط با من" },
 ];
 
 const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
